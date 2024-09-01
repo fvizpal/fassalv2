@@ -4,6 +4,8 @@ interface User {
 	first_name: string;
 	last_name: string;
 	email: string;
+	role?: string;       // Add the role to the User interface (optional)
+	address?: string;    // Add the address to the User interface (optional)
 }
 
 interface SocialAuthArgs {
@@ -15,6 +17,11 @@ interface SocialAuthArgs {
 interface CreateUserResponse {
 	success: boolean;
 	user: User;
+}
+
+interface UpdateUserArgs {
+	role: string;
+	address: string;
 }
 
 const authApiSlice = apiSlice.injectEndpoints({
@@ -55,6 +62,13 @@ const authApiSlice = apiSlice.injectEndpoints({
 				url: '/accounts/',
 				method: 'POST',
 				body: { first_name, last_name, email, password, re_password },
+			}),
+		}),
+		updateUser: builder.mutation<User, UpdateUserArgs>({
+			query: ({ role, address }) => ({
+				url: '/auth/users/me/',
+				method: 'PATCH',
+				body: { role, address },
 			}),
 		}),
 		verify: builder.mutation({
@@ -98,6 +112,7 @@ export const {
 	useSocialAuthenticateMutation,
 	useLoginMutation,
 	useRegisterMutation,
+	useUpdateUserMutation,
 	useVerifyMutation,
 	useLogoutMutation,
 	useActivationMutation,
