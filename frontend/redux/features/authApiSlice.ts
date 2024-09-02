@@ -4,8 +4,8 @@ interface User {
 	first_name: string;
 	last_name: string;
 	email: string;
-	role?: string;       // Add the role to the User interface (optional)
-	address?: string;    // Add the address to the User interface (optional)
+	role?: string;
+	address?: string;
 }
 
 interface SocialAuthArgs {
