@@ -43,3 +43,8 @@ export const PasswordResetSchema = z.object({
     message: "Email is required",
   }),
 });
+
+export const OnboardSchema = z.object({
+  role: z.string(),
+  address: z.string()
+})

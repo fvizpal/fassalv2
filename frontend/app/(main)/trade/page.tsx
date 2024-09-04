@@ -1,9 +1,8 @@
-import { OnboardForm } from '@/components/auth'
 import React from 'react'
 
 const Page = () => {
   return (
-    <OnboardForm />
+    <div>Page</div>
   )
 }
 

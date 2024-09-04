@@ -2,13 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { ArrowDown } from "lucide-react";
+import { LandNav } from "@/components/shared";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between w-full">
 
-      {/* <LandNav /> */}
+      <LandNav />
 
+      {/* <!-- Hero Section --> */}
       {/* <!-- Hero Section --> */}
       <section className=" text-white w-full">
         <Image
@@ -44,7 +46,7 @@ export default function Home() {
             <p className="text-lg">Explore the key features of our app</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
+            <div className="bg-white p-6 rounded-lg shadow-lg dark:bg-slate-600">
               <Image
                 src="/assets/images/land-comm.jpeg"
                 alt="Feature 1"
@@ -54,18 +56,18 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-2">Post Commodities</h3>
               <p>Farmers can post large quantities of their produce for sale.</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
+            <div className="bg-white p-6 rounded-lg shadow-lg dark:bg-slate-600">
               <Image
-                src="/assets/images/land1.jpeg"
+                src="/assets/images/land-bid.jpeg"
                 alt="Feature 2"
                 className="w-full h-40 object-contain mb-6"
                 width={100} height={100} />
               <h3 className="text-2xl font-bold mb-2">Bid System</h3>
               <p>Middlemen can place bids on commodities and the highest bidder wins.</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
+            <div className="bg-white p-6 rounded-lg shadow-lg dark:bg-slate-600">
               <Image
-                src="/assets/images/land1.jpeg"
+                src="/assets/images/land-dash.jpeg"
                 alt="Feature 3"
                 className="w-full h-40 object-contain mb-6"
                 width={100} height={100} />
@@ -77,7 +79,7 @@ export default function Home() {
       </section>
 
       {/* <!-- Dashboard Section --> */}
-      <section className="p-10 bg-gray-200 rounded-xl">
+      <section className="p-10 bg-gray-200 rounded-xl dark:bg-slate-800">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold mb-8">Sales Analysis</h2>
           <div className="flex justify-center">
@@ -110,14 +112,14 @@ export default function Home() {
       </section>
 
       {/* <!-- Store Section --> */}
-      <section className=" mb-10 p-10 rounded-xl bg-gray-200">
+      <section className=" mb-10 p-10 rounded-xl bg-gray-200 dark:bg-slate-800">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold">Store</h2>
             <p className="text-lg">Browse and purchase farming equipment</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+            <div className="bg-white p-6 rounded-lg shadow-lg dark:bg-slate-600">
               <Image
                 src="/assets/images/land-tractor.jpeg"
                 alt="Equipment 1"
@@ -127,7 +129,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-2">Tractor</h3>
               <p>High-quality tractor for all your farming needs.</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
+            <div className="bg-white p-6 rounded-lg shadow-lg dark:bg-slate-600">
               <Image
                 src="/assets/images/land-plough.jpeg"
                 alt="Equipment 1"
@@ -137,11 +139,11 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-2">Plough</h3>
               <p>Durable plough to make your soil preparation easier.</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
+            <div className="bg-white p-6 rounded-lg shadow-lg dark:bg-slate-600">
               <Image
-                src="/assets/images/land-tractor.jpeg"
+                src="/assets/images/land-speed.jpeg"
                 alt="Equipment 1"
-                className="w-full h-40 object-cover mb-6"
+                className="w-full h-40 object-contain mb-6"
                 width={100} height={100}
               />
               <h3 className="text-2xl font-bold mb-2">Seed Drill</h3>
@@ -152,7 +154,7 @@ export default function Home() {
       </section>
 
       {/* <!-- Footer --> */}
-      <footer className="bg-green-600 w-full text-white py-8">
+      <footer className="bg-green-500 w-full text-white py-8">
         <div className="container mx-auto text-center">
           <p>&copy; 2024 Fassal. All rights reserved.</p>
         </div>
